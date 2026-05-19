@@ -1,57 +1,30 @@
-# 🎧 ML Audio Visualizer
+# 🎧 ML Audio Emotion Visualizer
 
-An end-to-end machine learning audio visualizer that transforms music into real-time visual effects based on predicted emotional “mood.” The system processes audio, runs a trained ML model for mood classification, maps outputs through a mood system, and generates dynamic visuals driven by both audio features and model predictions.
+A machine learning–based project built in Google Colab that analyzes audio and generates visual representations driven by predicted emotional state (mood). The project combines audio feature processing, a trained CNN model, and a mood mapping system to transform sound into emotion-based visual outputs.
 
 ---
 
 ## 🧠 Overview
 
-This project combines audio signal processing, machine learning, and procedural visualization.
+This project explores the relationship between audio signals and emotion by:
+- Extracting audio features from input sound
+- Using a trained CNN model to predict emotional state
+- Mapping predictions through a custom mood table system
+- Generating visual outputs based on predicted mood
 
-Audio is analyzed in real time, passed into a trained model, converted into a mood state, and used to control visual behavior like color, motion, and shape generation.
-
----
-
-## ⚙️ Pipeline
-
-Audio Input  
-→ Feature Extraction (volume, pitch, tempo, spectral data)  
-→ ML Model (mood prediction)  
-→ Mood Table Mapping  
-→ Visualizer Engine (real-time graphics)
+The entire workflow was developed and executed in **Google Colab notebooks**.
 
 ---
 
-## 📁 Project Structure
+## 📁 Repository Structure
 
-ml-audio-visualizer/
+```text
+emotion_pipeline.ipynb            # End-to-end audio → emotion pipeline
+MAIN Image_Generator.ipynb        # Generates visuals from mood/audio features
+Final_Mood_Table.ipynb            # Finalized mood mapping logic
+Copy of Mood_Table.ipynb          # Experimental version of mood mapping system
 
-├── model/  
-│   ├── model.py              # ML model architecture  
-│   ├── train.py              # Training pipeline  
-│   ├── dataset_loader.py     # Data preprocessing  
-
-├── visualizer/  
-│   ├── visualizer.py         # Core rendering engine  
-│   ├── audio_engine.py       # Audio feature extraction  
-│   ├── effects.py            # Mood-based visuals  
-
-├── mood_system/  
-│   ├── mood_table.py         # Maps predictions to moods  
-│   ├── mood_logic.py         # Mood processing rules  
-│   ├── labels.json           # Mood definitions  
-
-├── data/  
-│   └── audio datasets / features  
-
-├── main.py                   # Entry point  
-└── README.md  
-
----
-
-## 🧪 Model Training
-
-The model is trained on extracted audio features to classify emotional states (calm, happy, sad, energetic, etc.).
-
-```bash
-python model/train.py
+emotion_model/
+├── best_cnn_model.keras          # Trained CNN model for emotion classification
+├── label_scaler.pkl              # Label/feature scaler used for normalization
+├── config.json                   # Model configuration and parameters
