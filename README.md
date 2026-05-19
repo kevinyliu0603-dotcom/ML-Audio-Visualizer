@@ -2,7 +2,7 @@
 
 A machine learning–based project built in Google Colab that analyzes audio and generates visual representations driven by predicted emotional state (mood). The project combines audio feature processing, a trained CNN model, and a mood mapping system to transform sound into emotion-based visual outputs.
 
----
+Developed with Claire Kim, Daniel Chen, Nathaniel Scanlon, and Sohum Walavalkar as part of final project for Art and Machine Learning course at CMU
 
 ## 🧠 Overview
 
